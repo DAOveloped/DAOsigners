@@ -51,3 +51,4 @@ This is a starter template using the following stack:
 - Formatting - [Prettier](https://prettier.io)
 
 INSERT INTO users (id, email, name, username, twitter ) VALUES (1, 'me@site.com', 'Me', 'username', 'handle');
+ALTER TABLE users ADD COLUMN twitter VARCHAR(255);
