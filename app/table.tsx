@@ -13,6 +13,7 @@ interface User {
   name: string;
   username: string;
   email: string;
+  twitter?: string;
 }
 
 export default function UsersTable({ users }: { users: User[] }) {
@@ -23,6 +24,7 @@ export default function UsersTable({ users }: { users: User[] }) {
           <TableHeaderCell>Name</TableHeaderCell>
           <TableHeaderCell>Username</TableHeaderCell>
           <TableHeaderCell>Email</TableHeaderCell>
+          <TableHeaderCell>Twitter</TableHeaderCell>
         </TableRow>
       </TableHead>
       <TableBody>
@@ -34,6 +36,9 @@ export default function UsersTable({ users }: { users: User[] }) {
             </TableCell>
             <TableCell>
               <Text>{user.email}</Text>
+            </TableCell>
+            <TableCell>
+              <Text>{user.twitter}</Text>
             </TableCell>
           </TableRow>
         ))}
