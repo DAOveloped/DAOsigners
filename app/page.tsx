@@ -23,7 +23,7 @@ export default async function IndexPage({
   const users = result.rows as User[];
 
   return (
-    <main className="p-4 md:p-10 mx-auto max-w-7xl">
+    <main className="p-4 md:p-10 mx-auto max-w-4xl">
       <Title>DAOsigners</Title>
       <Text>All of the DAOsigners for DAOsigner Apparel</Text>
       <Search />
