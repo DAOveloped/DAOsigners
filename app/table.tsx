@@ -10,10 +10,10 @@ import {
 
 interface User {
   id: number;
-  name: string;
+
   username: string;
-  email: string;
-  twitter?: string;
+
+  twitter: string; // Make twitter optional
 }
 
 export default function UsersTable({ users }: { users: User[] }) {
@@ -21,22 +21,18 @@ export default function UsersTable({ users }: { users: User[] }) {
     <Table>
       <TableHead>
         <TableRow>
-          <TableHeaderCell>Name</TableHeaderCell>
           <TableHeaderCell>Username</TableHeaderCell>
-          <TableHeaderCell>Email</TableHeaderCell>
+
           <TableHeaderCell>Twitter</TableHeaderCell>
         </TableRow>
       </TableHead>
       <TableBody>
         {users.map((user) => (
           <TableRow key={user.id}>
-            <TableCell>{user.name}</TableCell>
             <TableCell>
               <Text>{user.username}</Text>
             </TableCell>
-            <TableCell>
-              <Text>{user.email}</Text>
-            </TableCell>
+
             <TableCell>
               <Text>{user.twitter}</Text>
             </TableCell>
