@@ -5,9 +5,8 @@ import UsersTable from './table';
 
 interface User {
   id: number;
-  name: string;
   username: string;
-  email: string;
+  twitter: string;
 }
 
 export default async function IndexPage({
@@ -17,18 +16,18 @@ export default async function IndexPage({
 }) {
   const search = searchParams.q ?? '';
   const result = await sql`
-    SELECT id,  username,  twitter
+    SELECT id,username, twitter
     FROM users 
     WHERE name ILIKE ${'%' + search + '%'};
   `;
   const users = result.rows as User[];
 
   return (
-    <main className="p-4 md:p-10 mx-auto max-w-4xl">
+    <main className="p-4 md:p-10 mx-auto max-w-7xl">
       <Title>DAOsigners</Title>
       <Text>All of the DAOsigners for DAOsigner Apparel</Text>
       <Search />
-      <Card className=" mt-6">
+      <Card className="mt-6">
         <UsersTable users={users} />
       </Card>
     </main>
