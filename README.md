@@ -49,3 +49,5 @@ This is a starter template using the following stack:
 - Analytics - [Vercel Analytics](https://vercel.com/analytics)
 - Linting - [ESLint](https://eslint.org)
 - Formatting - [Prettier](https://prettier.io)
+
+INSERT INTO users (id, email, name, username, twitter ) VALUES (1, 'me@site.com', 'Me', 'username', 'handle');
